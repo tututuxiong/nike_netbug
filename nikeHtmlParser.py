@@ -8,7 +8,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 price_patten_rule = "\d+"
-style_patten_rule = "\d+.*"
+style_patten_rule = ":.*"
 
 class NikeHTMLParser(HTMLParser):
     def __init__(self):

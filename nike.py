@@ -97,7 +97,11 @@ def fetch_product_info(url):
         for size in nikeParser.sizeList:
             p.addStockList(size)
 
-        p.price = nikeParser.price + ',' + nikeParser.originPrice
+        if len(nikeParser.originPrice) != 0:
+            p.price = nikeParser.price + ',' + nikeParser.originPrice
+        else:
+            p.price = nikeParser.price
+
         p.desc = nikeParser.desc
         p.style = nikeParser.style
         p.titleDesc = nikeParser.titleDesc
